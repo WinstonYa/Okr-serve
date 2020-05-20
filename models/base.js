@@ -25,8 +25,8 @@ class Base {
     return knex(this.table).where('id', '=', id).del();
   }
 
-  update(id, params ){
-    return knex(this.table).where('id', '=', id).update( params )
+  update(id, params) {
+    return knex(this.table).where('id', '=', id).update(params)
   }
 }
 

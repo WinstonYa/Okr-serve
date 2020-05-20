@@ -24,7 +24,6 @@ const userController = {
       }
 
       let userInfo = await User.select({ open_id });
-      console.log(userInfo)
       let id = userInfo[0].id;
       if (open_id === userInfo[0].open_id) {
         ctx.body = ({

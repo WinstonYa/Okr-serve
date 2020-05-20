@@ -13,6 +13,7 @@ const todoKeyresultController = {
 
     let objectives = await Objective.select(params);
     let objective_ids = objectives.map(data => data.id);
+    console.log(objective_ids)
     let keyresults = await Keyresult.knex().whereIn('objective_id', objective_ids);
     let todoKeyresults = await TodoKeyresult.select({ todo_id });
     let keyresult_ids = todoKeyresults.map(data => data.keyresult_id)
